@@ -1,6 +1,8 @@
 # lazy-load-image-lit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/lazy-load-image-lit.svg)](https://www.npmjs.com/package/lazy-load-image-lit)
+[![npm downloads](https://img.shields.io/npm/dm/lazy-load-image.svg)](https://www.npmjs.com/package/lazy-load-image)
 
 A lightweight, framework-agnostic lazy loading image component built with Lit Element. Load images only when they're visible to improve page performance and user experience.
 
@@ -17,26 +19,46 @@ By building with Lit Element, this component:
 
 ## Features
 
-- 🚀 **Performance Focused**: Images load only when they enter (or approach) the viewport, significantly reducing initial page load time and saving bandwidth
-- 🔄 **Progressive Enhancement**: Uses IntersectionObserver API for modern browsers with intelligent fallback to optimized scroll events for older browsers
-- 🎨 **Visual Transitions**: Smooth loading effects with multiple options:
-  - **Blur Effect**: Starts with a blurred placeholder that sharpens when loaded
-  - **Black and White Effect**: Shows a grayscale version that transitions to full color
-  - **Customizable Transitions**: Clean CSS transitions with configurable timing
-- ⚙️ **Highly Configurable**: 
-  - Control threshold distance for preloading images
-  - Choose between debounce or throttle for scroll performance optimization
-  - Configure with visible-by-default option for above-the-fold content
-  - Set specific dimensions or use responsive sizing
-- 📱 **Responsive & Mobile-Friendly**: Works seamlessly across all device sizes and adapts to different viewport dimensions
-- ✅ **Zero External Dependencies**: Only depends on Lit, which is included in the bundle
-- 🧩 **Framework Agnostic**: Works natively in any environment:
-  - Vanilla HTML/JS projects
-  - React applications with proper event handling
-  - Vue.js with native custom element support
-  - Angular with CUSTOM_ELEMENTS_SCHEMA
-  - Any other modern framework
+## 🚀 Performance Focused
 
+Images load only when they enter (or approach) the viewport, significantly reducing initial page load time and saving bandwidth.
+
+## 🔄 Progressive Enhancement
+
+Uses IntersectionObserver API for modern browsers with intelligent fallback to optimized scroll events for older browsers.
+
+## 🎨 Visual Transitions
+
+Smooth loading effects with multiple options:
+
+- **Blur Effect**: Starts with a blurred placeholder that sharpens when loaded.
+- **Black and White Effect**: Shows a grayscale version that transitions to full color.
+- **Customizable Transitions**: Clean CSS transitions with configurable timing.
+
+## ⚙️ Highly Configurable
+
+- Control threshold distance for preloading images.
+- Choose between debounce or throttle for scroll performance optimization.
+- Configure with visible-by-default option for above-the-fold content.
+- Set specific dimensions or use responsive sizing.
+
+## 📱 Responsive & Mobile-Friendly
+
+Works seamlessly across all device sizes and adapts to different viewport dimensions.
+
+## ✅ Zero External Dependencies
+
+Only depends on Lit, which is included in the bundle.
+
+## 🧩 Framework Agnostic
+
+Works natively in any environment:
+
+- Vanilla HTML/JS projects.
+- React applications with proper event handling.
+- Vue.js with native custom element support.
+- Angular with CUSTOM_ELEMENTS_SCHEMA.
+- Any other modern framework.
 
 ## Installation
 
@@ -48,7 +70,7 @@ npm install lazy-load-image-lit
 
 ```html
 <!-- Import the component -->
-<script type="module" src="node_modules/lazy-load-image-lit/dist/lazy-load-image-lit.js"></script>
+<script type="module" src="node_modules/lazy-load-image-lit/dist/lazy-load-image-lit.es.js"></script>
 
 <!-- Use it in your HTML -->
 <lazy-img
