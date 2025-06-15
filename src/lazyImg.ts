@@ -68,10 +68,10 @@ export class LazyImg extends LitElement {
   @property({ type: String }) placeholderSrc = '';
   @property({ type: String }) effect = 'blur';
   @property({ type: Number }) threshold = 0;
-  @property({ type: Boolean }) useIntersectionObserver = false;
+  @property({ type: Boolean }) useIntersectionObserver = true;
   @property({ type: Boolean }) visibleByDefault = false;
   @property({ type: String }) delayMethod = 'debounce'; // 'debounce' or 'throttle'
-  @property({ type: Number }) delayTime = 0;
+  @property({ type: Number }) delayTime = 300;
   @property({ type: Number }) width = 0;
   @property({ type: Number }) height = 0;
   @property({ type: String }) imgStyle = '';
