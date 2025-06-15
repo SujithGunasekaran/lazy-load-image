@@ -123,7 +123,6 @@ export class LazyImg extends LitElement {
     } else {
       this.initScrollAndResizeHandlers();
     }
-    this.handleScroll();
   }
 
   disconnectedCallback() {
@@ -135,6 +134,9 @@ export class LazyImg extends LitElement {
   firstUpdated() {
     if (this.observer) {
       this.observer.observe(this);
+    }
+    if (!this.useIntersectionObserver && !this.visibleByDefault) {
+      this.handleScroll();
     }
   }
 
