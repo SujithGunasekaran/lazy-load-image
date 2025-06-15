@@ -215,11 +215,3 @@ For smooth scrolling with many images:
   placeholderSrc="small.jpg"
 ></lazy-img>
 ```
-
-## License
-
-MIT License - Feel free to use in personal and commercial projects.
-
-## Contributing
-
-Contributions, issues and feature requests are welcome!
