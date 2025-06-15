@@ -1,6 +1,6 @@
 {
   "name": "lazy-load-image-lit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, framework-agnostic lazy loading image web component built with Lit",
   "main": "dist/lazy-load-image-lit.umd.js",
   "module": "dist/lazy-load-image-lit-lit.es.js",

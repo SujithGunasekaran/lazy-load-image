@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/lazyImg.ts'),
       name: 'LazyLoadImage',
-      fileName: (format) => `lazy-load-image.${format}.js`,
+      fileName: (format) => `lazy-load-image-lit.${format}.js`,
       formats: ['es', 'umd'],
     },
     rollupOptions: {
