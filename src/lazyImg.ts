@@ -207,6 +207,7 @@ export class LazyImg extends LitElement {
 
     const rect = this.getBoundingClientRect();
     let isCurrentlyVisible = false;
+    const threshold = this.threshold || 0;
 
     if (this.scrollParent instanceof HTMLElement) {
       const parentRect = this.scrollParent.getBoundingClientRect();
@@ -215,14 +216,15 @@ export class LazyImg extends LitElement {
       const containerLeft = parentRect.left;
       const containerRight = parentRect.right;
 
-      const inVerticalView = rect.bottom >= containerTop && rect.top <= containerBottom;
-      const inHorizontalView = rect.right >= containerLeft && rect.left <= containerRight;
+      // Use threshold for preloading before entering viewport
+      const inVerticalView = rect.bottom >= containerTop - threshold && rect.top <= containerBottom + threshold;
+      const inHorizontalView = rect.right >= containerLeft - threshold && rect.left <= containerRight + threshold;
 
       isCurrentlyVisible = inVerticalView && inHorizontalView;
     } else {
-      const inVerticalView = rect.bottom >= 0 && rect.top <= window.innerHeight;
-      const inHorizontalView = rect.right >= 0 && rect.left <= window.innerWidth;
-
+      // Use threshold for window viewport
+      const inVerticalView = rect.bottom >= 0 - threshold && rect.top <= window.innerHeight + threshold;
+      const inHorizontalView = rect.right >= 0 - threshold && rect.left <= window.innerWidth + threshold;
 
       isCurrentlyVisible = inVerticalView && inHorizontalView;
     }
