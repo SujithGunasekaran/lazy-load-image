@@ -60,6 +60,15 @@ Works natively in any environment:
 - Angular with CUSTOM_ELEMENTS_SCHEMA.
 - Any other modern framework.
 
+## Peer Dependency Required
+
+> **Important:**
+> This package requires [`lit`](https://www.npmjs.com/package/lit) as a peer dependency. You must install it in your project:
+>
+> ```bash
+> npm install lit
+> ```
+
 ## Installation
 
 ```bash
