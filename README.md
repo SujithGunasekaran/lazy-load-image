@@ -8,7 +8,7 @@ A lightweight, framework-agnostic lazy loading image component built with Lit El
 
 ## Why I Built This
 
-I was inspired by the popular `react-lazy-load-image-component`, which works great but is limited to React applications. I wanted to create something with the same powerful lazy loading capabilities but that would work universally across all frameworks and vanilla JavaScript.
+I was inspired by the popular [`react-lazy-load-image-component`](https://www.npmjs.com/package/react-lazy-load-image-component), which works great but is limited to React applications. I wanted to create something with the same powerful lazy loading capabilities but that would work universally across all frameworks and vanilla JavaScript.
 
 By building with Lit Element, this component:
 
@@ -33,7 +33,7 @@ Smooth loading effects with multiple options:
 
 - **Blur Effect**: Starts with a blurred placeholder that sharpens when loaded.
 - **Black and White Effect**: Shows a grayscale version that transitions to full color.
-- **Customizable Transitions**: Clean CSS transitions with configurable timing.
+
 
 ## ⚙️ Highly Configurable
 
@@ -159,19 +159,19 @@ import 'lazy-load-image-lit';
 
 ## Properties & Attributes
 
-| Property | Type | Default | Description | Available Options |
-|----------|------|---------|-------------|-------------------|
-| `src` | String | `''` | The URL of the main image to be lazy-loaded | Any valid image URL |
-| `placeholderSrc` | String | `''` | URL of the placeholder image shown until the main image loads | Any valid image URL |
-| `effect` | String | `'blur'` | Visual transition effect to apply | `'blur'`, `'black-and-white'` |
-| `threshold` | Number | `0` | Distance in pixels from viewport when the image should start loading | Any number (e.g., 200 for 200px) |
-| `useIntersectionObserver` | Boolean | `true` | Whether to use IntersectionObserver API (modern approach) | `true`, `false` |
-| `visibleByDefault` | Boolean | `false` | When true, image loads immediately without lazy loading | `true`, `false` |
-| `delayMethod` | String | `'debounce'` | Method for handling scroll events | `'debounce'`, `'throttle'` |
-| `delayTime` | Number | `300` | Time in milliseconds for throttling/debouncing events | Any positive number |
-| `width` | Number | `0` | Width of the image in pixels | Any valid pixel value |
-| `height` | Number | `0` | Height of the image in pixels | Any valid pixel value |
-| `imgStyle` | String | `''` | Additional styles to apply to the image | Any valid CSS style string |
+| Property              | Type    | Default   | Description                                                                                                                                                                                                 | Available Options |
+|----------------------|---------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| `src`                | String  | `''`      | The URL of the main image to be lazy-loaded. When the image is about to enter the viewport, this is set as the `src` of the `<img>` element.                                                                | Any valid image URL |
+| `placeholderSrc`     | String  | `''`      | The URL of the placeholder image shown before the main image loads. This is always rendered until the main image is loaded and visible.                                                                      | Any valid image URL |
+| `effect`             | String  | `'blur'`  | Visual effect applied to the image during loading. `'blur'` applies a blur to the placeholder, `'black-and-white'` shows a grayscale effect. The effect is removed when the main image loads.                | `'blur'`, `'black-and-white'` |
+| `threshold`          | Number  | `0`       | Distance in pixels from the viewport at which the image should start loading. Used as `rootMargin` for IntersectionObserver or as a buffer for scroll-based detection.                                       | Any number (e.g., 200 for 200px) |
+| `useIntersectionObserver` | Boolean | `false` | If `true`, uses the IntersectionObserver API for efficient lazy loading. If `false`, falls back to scroll/resize event listeners for visibility detection.                                                  | `true`, `false` |
+| `visibleByDefault`   | Boolean | `false`   | If `true`, the image loads immediately without lazy loading. Useful for above-the-fold images. If `false`, lazy loading is enabled.                                                                          | `true`, `false` |
+| `delayMethod`        | String  | `'debounce'` | Method for handling scroll/resize events: `'debounce'` waits for a pause in events, `'throttle'` limits event frequency. Only used when not using IntersectionObserver.                                      | `'debounce'`, `'throttle'` |
+| `delayTime`          | Number  | `0`       | Time in milliseconds for throttling or debouncing scroll/resize events. Controls how often visibility checks are performed.                                                                                  | Any positive number |
+| `width`              | Number  | `0`       | Width of the image in pixels. Passed directly to the `<img>` element. If `0`, the attribute is omitted and the image uses its natural width or CSS.                                                          | Any valid pixel value |
+| `height`             | Number  | `0`       | Height of the image in pixels. Passed directly to the `<img>` element. If `0`, the attribute is omitted and the image uses its natural height or CSS.                                                        | Any valid pixel value |
+| `imgStyle`           | String  | `''`      | Additional inline styles to apply to the `<img>` element. Useful for custom styling or responsive images.                                                                                                    | Any valid CSS style string |
 
 ## Events
 
@@ -179,16 +179,6 @@ import 'lazy-load-image-lit';
 |------------|---------------|--------------|
 | `image-loaded` | When the main image has finished loading | Original image load event in the detail property |
 
-
-## Why Lit Element?
-
-Lit Element provides several advantages for this component:
-
-- **Small Footprint**: Minimal impact on your bundle size
-- **Standard-Based**: Built on modern web component standards
-- **Framework Independence**: Works anywhere, no vendor lock-in
-- **Efficient Updates**: Smart rendering system that only updates what changes
-- **Shadow DOM**: Style encapsulation prevents conflicts with your app's CSS
 
 ## Advanced Configuration
 

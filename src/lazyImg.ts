@@ -251,7 +251,7 @@ export class LazyImg extends LitElement {
         src=${this.src}
         width=${this.width}
         height=${this.height}
-        imgStyle=${this.imgStyle}
+        style=${this.imgStyle}
         @load=${this.handleLoad}
       />`
       : html`<img
@@ -259,7 +259,7 @@ export class LazyImg extends LitElement {
         src=${this.placeholderSrc}
         width=${this.width}
         height=${this.height}
-        imgStyle=${this.imgStyle}
+        style=${this.imgStyle}
       />`;
   }
 }
