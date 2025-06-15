@@ -1,6 +1,6 @@
 # lazy-load-image-lit
 
-[![npm version](https://img.shields.io/npm/v/lazy-img.svg)](https://www.npmjs.com/package/lazy-img)
+[![npm version](https://img.shields.io/npm/v/lazy-img.svg)](https://www.npmjs.com/package/lazy-load-image-lit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A lightweight, framework-agnostic lazy loading image component built with Lit Element. Load images only when they're visible to improve page performance and user experience.
