@@ -1,0 +1,53 @@
+{
+  "name": "lazy-img",
+  "version": "1.0.0",
+  "description": "A lightweight, framework-agnostic lazy loading image web component built with Lit",
+  "main": "dist/lazy-load-image.umd.js",
+  "module": "dist/lazy-load-image.es.js",
+  "types": "dist/lazyImg.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/lazy-load-image.es.js",
+      "require": "./dist/lazy-load-image.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "lazy-load",
+    "image",
+    "lit",
+    "web-component",
+    "custom-element",
+    "lazy-loading",
+    "performance",
+    "react",
+    "vue",
+    "angular"
+  ],
+  "author": "Sujith Gunasekaran",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/lazy-img.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/lazy-img/issues"
+  },
+  "homepage": "https://github.com/yourusername/lazy-img#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "peerDependencies": {
+    "lit": "^3.0.0"
+  }
+}
