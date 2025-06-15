@@ -1,5 +1,5 @@
 {
-  "name": "lazy-img",
+  "name": "lazy-load-image",
   "version": "1.0.0",
   "description": "A lightweight, framework-agnostic lazy loading image web component built with Lit",
   "main": "dist/lazy-load-image.umd.js",
@@ -31,12 +31,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/lazy-img.git"
+    "url": "https://github.com/SujithGunasekaran/lazy-load-image"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/lazy-img/issues"
+    "url": "https://github.com/SujithGunasekaran/lazy-load-image/issues"
   },
-  "homepage": "https://github.com/yourusername/lazy-img#readme",
+  "homepage": "https://github.com/SujithGunasekaran/lazy-load-image/blob/main/README.md",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

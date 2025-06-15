@@ -1,4 +1,4 @@
-# lazy-img
+# lazy-load-image
 
 [![npm version](https://img.shields.io/npm/v/lazy-img.svg)](https://www.npmjs.com/package/lazy-img)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -42,14 +42,14 @@ By building with Lit Element, this component:
 ## Installation
 
 ```bash
-npm install lazy-img
+npm install lazy-load-image
 ```
 
 ## Basic Usage
 
 ```html
 <!-- Import the component -->
-<script type="module" src="node_modules/lazy-img/dist/lazy-img.js"></script>
+<script type="module" src="node_modules/lazy-load-image/dist/lazy-load-image.js"></script>
 
 <!-- Use it in your HTML -->
 <lazy-img
@@ -66,7 +66,7 @@ npm install lazy-img
 
 ```jsx
 import React, { useRef, useEffect } from 'react';
-import 'lazy-img';
+import 'lazy-load-image';
 
 function MyImage({ src, placeholder }) {
   const imgRef = useRef(null);
@@ -103,7 +103,7 @@ function MyImage({ src, placeholder }) {
 </template>
 
 <script>
-import 'lazy-img';
+import 'lazy-load-image';
 
 export default {
   methods: {
@@ -120,7 +120,7 @@ export default {
 ```typescript
 // app.module.ts
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import 'lazy-img';
+import 'lazy-load-image';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA] // Required for custom elements
