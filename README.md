@@ -222,14 +222,34 @@ import 'lazy-load-image-lit';
 
 ### Controlling Scroll Event Performance
 
-For smooth scrolling with many images:
+By default, the lazy loading component uses the debounce method for handling scroll and resize events. This means images are only checked and loaded after scrolling has paused for a short period, reducing unnecessary work and improving performance. You can also use throttle if you prefer more frequent checks.
 
+**How it works:**
+- When you scroll quickly through a long list of images, debounce ensures that only the images currently in (or near) the viewport are loaded. For example, if you scroll rapidly to the bottom, only the last few images will load, and images in between are skipped until you scroll back up.
+- As you scroll back up, images will load one by one as they come into view, rather than all at once. This makes the experience smoother and more efficient, especially for pages with many images.
+
+**Example (using debounce):**
 ```html
-<!-- Use throttling for better scroll performance -->
 <lazy-img 
-  delayMethod="throttle" 
+  delayMethod="debounce" 
   delayTime="150"
   src="image.jpg" 
   placeholderSrc="small.jpg"
 ></lazy-img>
 ```
+
+This approach helps keep your page fast and responsive, even with a large number of images, by only loading what the user is actually about to see.
+
+## Common Errors
+
+### All Images Load at Once (Scroll Container Issue)
+
+A common issue when using this package is that all images load immediately, even if they are not visible. This usually happens because the package first checks for the nearest parent element with `overflow: auto` or `overflow: scroll` to determine which container should be used for lazy loading.
+
+If you set `overflow: auto` or `overflow: scroll` on a parent element that isn't actually scrollable (for example, if it doesn't have a fixed height or enough content to scroll), the component may think all images are in view and load them right away. This defeats the purpose of lazy loading.
+
+**Best Practice:**
+- Only add `overflow: auto` or `overflow: scroll` to a parent container if you really need a scrollable area (e.g., a div with a fixed height and lots of images inside).
+- If you don't need scrolling, avoid setting these overflow properties. Let the package use the window as the scroll container, so images are only loaded as they enter the viewport.
+
+This small adjustment can make a big difference in how well lazy loading works in your app!
