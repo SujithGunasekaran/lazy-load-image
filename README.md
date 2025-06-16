@@ -6,6 +6,8 @@
 
 A lightweight, framework-agnostic lazy loading image component built with Lit Element. Load images only when they're visible to improve page performance and user experience.
 
+# [Live Demo](https://lazy-load-image-demo.vercel.app/)
+
 ## Why I Built This
 
 I was inspired by the popular [`react-lazy-load-image-component`](https://www.npmjs.com/package/react-lazy-load-image-component), which works great but is limited to React applications. I wanted to create something with the same powerful lazy loading capabilities but that would work universally across all frameworks and vanilla JavaScript.
