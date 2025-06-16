@@ -21,15 +21,15 @@ By building with Lit Element, this component:
 
 ## Features
 
-## 🚀 Performance Focused
+### Performance Focused
 
 Images load only when they enter (or approach) the viewport, significantly reducing initial page load time and saving bandwidth.
 
-## 🔄 Progressive Enhancement
+### Progressive Enhancement
 
 Uses IntersectionObserver API for modern browsers with intelligent fallback to optimized scroll events for older browsers.
 
-## 🎨 Visual Transitions
+### Visual Transitions
 
 Smooth loading effects with multiple options:
 
@@ -37,22 +37,22 @@ Smooth loading effects with multiple options:
 - **Black and White Effect**: Shows a grayscale version that transitions to full color.
 
 
-## ⚙️ Highly Configurable
+### Highly Configurable
 
 - Control threshold distance for preloading images.
 - Choose between debounce or throttle for scroll performance optimization.
 - Configure with visible-by-default option for above-the-fold content.
 - Set specific dimensions or use responsive sizing.
 
-## 📱 Responsive & Mobile-Friendly
+### Responsive & Mobile-Friendly
 
 Works seamlessly across all device sizes and adapts to different viewport dimensions.
 
-## ✅ Zero External Dependencies
+### Zero External Dependencies
 
 Only depends on Lit, which is included in the bundle.
 
-## 🧩 Framework Agnostic
+### Framework Agnostic
 
 Works natively in any environment:
 
@@ -189,6 +189,22 @@ import 'lazy-load-image-lit';
 | Event Name | When It Fires | Data Provided |
 |------------|---------------|--------------|
 | `image-loaded` | When the main image has finished loading | Original image load event in the detail property |
+
+
+### Window Scroll
+
+![ScreenRecording2025-06-16at20 29 45-ezgif com-optimize](https://github.com/user-attachments/assets/bd864422-3c71-4fe2-8015-92f9b3215099)
+
+### Vertical-Container
+
+![ScreenRecording2025-06-16at20 32 01-ezgif com-optimize](https://github.com/user-attachments/assets/cf855f70-9418-488d-8c64-60caa1cdcf68)
+
+### Horizontal Scroll
+
+![horizontal-ezgif com-optimize](https://github.com/user-attachments/assets/4bbcea08-8542-45a1-85a4-a50df0fa9baf)
+
+
+
 
 
 ## Advanced Configuration
